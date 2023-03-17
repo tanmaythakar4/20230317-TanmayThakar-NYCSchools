@@ -1,2 +1,2 @@
-# 20230317-TanmayThakar-NYCSchools
+# NYC Schools
 Android Coding Challenge - NYC Schools
