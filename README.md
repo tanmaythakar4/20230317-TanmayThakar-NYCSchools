@@ -1,7 +1,7 @@
 # NYC Schools
 Android Coding Challenge - NYC Schools
 
-**NYC Schools** is a simple andorid app that allows students to get the list of NYC schoold and stat scores for those school.[OpenData CityOfNewYork](https://opendata.cityofnewyork.us/).
+**NYC Schools** is a simple android app that allows students to get the list of NYC schools and SAT scores for those schools.[OpenData CityOfNewYork](https://opendata.cityofnewyork.us/).
 
 Time spent: **~5** hours spent in total for the first phase, Still in progress
 
