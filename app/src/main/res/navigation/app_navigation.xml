@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation.xml"
+    app:startDestination="@id/schoolListFragment">
+
+
+    <fragment
+        android:id="@+id/schoolListFragment"
+        android:name="com.dynamo.jpmc.nycschools.ui.home.SchoolListFragment"
+        tools:layout="@layout/fragment_school_list">
+        <action
+            android:id="@+id/action_schoolListFragment_to_schoolDetailFragment"
+            app:destination="@id/schoolDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolDetailFragment"
+        android:name="com.dynamo.jpmc.nycschools.ui.detail.SchoolDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_school_detail">
+        <argument
+            android:name="schoolDetail"
+            android:defaultValue="@null"
+            app:argType="com.dynamo.jpmc.nycschools.data.model.SchoolDetail"
+            app:nullable="true" />
+    </fragment>
+</navigation>

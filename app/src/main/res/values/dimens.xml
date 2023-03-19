@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="standard_half_margin">8dp</dimen>
+    <dimen name="standard_small_margin">4dp</dimen>
+    <dimen name="school_image_width">150dp</dimen>
+    <dimen name="school_image_height">100dp</dimen>
+    <dimen name="school_image_list_height">200dp</dimen>
+    <dimen name="school_image_card_radius">8dp</dimen>
+    <dimen name="school_list_card_radius">4dp</dimen>
+</resources>

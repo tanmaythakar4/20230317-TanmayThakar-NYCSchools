@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NYC Schools</string>
+    <string name="address_label">Address</string>
+    <string name="sat_results_label">SAT Results (Avg. Score)</string>
+    <string name="not_available">Not Available</string>
+    <string name="students_took_the_test">students took the test</string>
+</resources>
