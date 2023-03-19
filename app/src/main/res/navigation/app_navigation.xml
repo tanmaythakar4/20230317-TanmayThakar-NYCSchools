@@ -9,6 +9,7 @@
     <fragment
         android:id="@+id/schoolListFragment"
         android:name="com.dynamo.jpmc.nycschools.ui.home.SchoolListFragment"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_school_list">
         <action
             android:id="@+id/action_schoolListFragment_to_schoolDetailFragment"

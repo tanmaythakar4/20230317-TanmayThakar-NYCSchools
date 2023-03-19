@@ -33,8 +33,8 @@ class SchoolViewModel @Inject constructor(
     }
 
     fun listSchoolDetails(hardRefresh: Boolean) {
-        _schoolDetails.postValue(Response.InProgress())
         viewModelScope.launch {
+            _schoolDetails.postValue(Response.InProgress())
             _schoolDetails.postValue(schoolRepository.getSchoolDetails(hardRefresh))
         }
     }

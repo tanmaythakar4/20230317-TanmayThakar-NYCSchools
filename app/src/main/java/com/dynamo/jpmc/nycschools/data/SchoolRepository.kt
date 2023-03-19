@@ -14,6 +14,10 @@ import javax.inject.Inject
  */
 class SchoolRepository @Inject constructor(val api: SchoolApi, val db: SchoolDatabase) {
 
+    /**
+     * If the @param hardRefresh = true then it will always fetch the result from API
+     * but if it's @param hardRefresh = false it will first try to get the local data if it has
+     */
     suspend fun getSchoolDetails(hardRefresh: Boolean): Response<List<SchoolDetail>> {
         return withContext(Dispatchers.IO) {
             val dbResults = db.schoolDao().getAllSchool()
@@ -40,6 +44,11 @@ class SchoolRepository @Inject constructor(val api: SchoolApi, val db: SchoolDat
         }
     }
 
+    /**
+     * If the @param hardRefresh = true then it will always fetch the result from API
+     * but if it's @param hardRefresh = false it will first try to get the local data if it has
+     * @param dbn = unique school Id id to get the sat scores
+     */
     suspend fun getSatScores(hardRefresh: Boolean, dbn: String): Response<SatScores> {
         return withContext(Dispatchers.IO) {
             val dbResults = db.satScoreDao().getSatScores(dbn)
