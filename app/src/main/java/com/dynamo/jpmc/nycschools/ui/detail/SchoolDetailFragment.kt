@@ -30,9 +30,12 @@ class SchoolDetailFragment : Fragment(R.layout.fragment_school_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSchoolDetailBinding.bind(view)
-        schoolDetail = args.schoolDetail!!
-        getSelectedSchoolDetail()
-        setupSwipeRefresh()
+
+        args.schoolDetail?.let { school ->
+            schoolDetail = school
+            updateSchoolDetail()
+            setupSwipeRefresh()
+        }
     }
 
     private fun setupSwipeRefresh() {
@@ -41,7 +44,7 @@ class SchoolDetailFragment : Fragment(R.layout.fragment_school_detail) {
         }
     }
 
-    private fun getSelectedSchoolDetail() {
+    private fun updateSchoolDetail() {
         binding.schoolDetails = schoolDetail
         schoolViewModel.getSatScores(schoolDetail.dbn, false)
         binding.phoneButton.setOnClickListener { _ ->
